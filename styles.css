@@ -79,7 +79,6 @@ header {
   /* Section Styles */
   section.content {
     padding: 2em 10%;
-    border-bottom: 1px solid #eaeaea;
     background-color: #fff;
     margin: 1em auto;
     max-width: 800px;
