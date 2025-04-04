@@ -1,144 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='25' y='25' width='50' height='50' fill='%23D3D3D3'/></svg>" type="image/svg+xml">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeong A Kim - Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- link to a potential external stylesheet -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeong A Kim - Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='25' y='25' width='50' height='50' fill='%23D3D3D3'/></svg>" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <!-- Header Section -->
-    <header data-lang="en" class="content">
-        <h1>Jeong A Kim</h1>
-        <p>Arabic literature researcher and translator</p>
-    </header>
-    <header data-lang="ko" class="content" style="display: none;">
-        <h1>김정아</h1>
-        <p>아랍문학 연구자, 번역가.</p>
-    </header>
-
-    <!-- Language Selection -->
-    <div id="language-selector">
+  <!-- Language Selector -->
+  <nav id="language-selector">
     <button onclick="changeLanguage('en')">English</button>
     <button onclick="changeLanguage('ko')">한국어</button>
     <button onclick="changeLanguage('ar')">عربي</button>
+  </nav>
+  
+  <!-- Profile Area -->
+  <section id="profile-area">
+    <div id="profile-picture">
+      <img src="./assets/jakim.png" alt="Jeong A Kim's Profile Picture">
     </div>
+    <div id="profile-info">
+      <div class="profile-info content" data-lang="en">
+        <h1>Jeong A Kim, Ph.D</h1>
+        <p>Researcher, Institute of Middle East Studies<br>
+           Professor, Hankuk University of Foreign Studies<br>
+           Translator of The Muqaddimah and other medieval Arabic prose</p>
+      </div>
+      <div class="profile-info content" data-lang="ko" style="display: none;">
+        <h1>김정아</h1>
+        <p>한국외국어대학교 중동연구소 전임연구원, 한국외국어대학교 객원교수, 번역가.</p>
+      </div>
+      <div class="profile-info content" data-lang="ar" style="display: none;">
+        <h1>جيونغ آه كيم</h1>
+        <p>باحثة، معهد الدراسات الشرق أوسطية<br>
+           أستاذة، جامعة هانكوك للدراسات الأجنبية<br>
+           مترجمة “المقدمة” ونصوص أخرى من النثر العربي في العصور الوسطى</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Profile Picture Section (if available) -->
-    <section id="profile-picture">
-        <img src="./assets/jakim.png" alt="Jeong A Kim's Profile Picture" />
-    </section>
+  <!-- About Section -->
+  <section class="content" data-lang="en">
+    <h2>About Dr. Kim</h2>
+    <p>
+      Dr. Kim is a researcher and professor specializing in Arabic literature. She is a full-time researcher at the 
+      <a href="https://builder.hufs.ac.kr/user/indexSub.action?codyMenuSeq=42286281&siteId=hufsenglish3&menuType=T&uId=3&sortChar=A&linkUrl=3_5.html&mainFrame=right">Institute of Middle East Studies</a> 
+      at <a href="https://international.hufs.ac.kr/">Hankuk University of Foreign Studies</a>, where since 2020 she has been leading the Humanities and Social Research project “The Arab Spring and Diaspora: Conflict, Harmony, and Coexistence,” funded by the National Research Foundation of Korea. Dr. Kim also teaches in the Arabic Language Department and in the 
+      <a href="https://builder.hufs.ac.kr/user/indexSub.action?codyMenuSeq=42185649&siteId=hufsenglish3&menuType=T&uId=2&sortChar=AB&linkUrl=02_03.html&mainFrame=right">Graduate School of Interpretation and Translation</a> 
+      (Korean-Arabic division) at Hankuk University of Foreign Studies.
+      <br><br>
+      She earned her doctorate in literature from Hankuk University of Foreign Studies (HUFS) with a dissertation on al-Jahiz’s "Book of Misers" and holds a master’s degree from the Graduate School of Interpretation and Translation at HUFS. Her primary research focuses on medieval Arabic prose, and she is currently working on a translation of al-Hamadhani’s al-Maqamaat.
+    </p>
+  </section>
+  <section class="content" data-lang="ko" style="display: none;">
+    <h2>약력</h2>
+    <p>
+      한국외국어대학교 중동연구소 전임연구원으로 2020년부터 한국연구재단 인문사회연구사업 <아랍의 봄과 이산(離散): 갈등·화합·공존>을 수행 중이다. 한국외국어대학교 아랍어과, 동 대학 통번역대학원 한-아과 객원교수로 재직 중이다.
+      한국외국어대학교에서 9세기 아랍 문학가 ‘자히즈의 『수전노』 연구’로 문학박사학위를 취득했으며, 통번역대학원에서 석사 학위를 받았다.
+      주요 연구 분야는 중세 아랍 산문이며, 현재 하마다니의 『마까마(al-Maqamaat)』를 번역 중이다.
+    </p>
+  </section>
+  <section class="content" data-lang="ar" style="display: none;">
+    <h2>عني</h2>
+    <p>
+      منذ العام 2020، وبصفتها باحثة وأستاذة متخصصة في الأدب العربي، تعمل الدكتورة كيم كباحثة بدوام كامل في 
+      <a href="https://builder.hufs.ac.kr/user/indexSub.action?codyMenuSeq=42286281&siteId=hufsenglish3&menuType=T&uId=3&sortChar=A&linkUrl=3_5.html&mainFrame=right">معهد الشرق الأوسط</a> 
+      بجامعة هانكوك للدراسات الأجنبية، حيث تقود مشروع البحث في العلوم الإنسانية والاجتماعية بعنوان "الربيع العربي والشتات: الصراع، الوئام، والتعايش"، بتمويل من المؤسسة الوطنية للبحوث الكورية. كما تُدرس في قسم اللغة العربية وكلية الترجمة والتفسير (القسم الكوري-العربي) بنفس الجامعة.
+      <br><br>
+      حصلت الدكتورة كيم على درجة الدكتوراه في الأدب من الجامعة بدراسة عن "كتاب البخلاء" للجاحظ، وحصلت على درجة الماجستير من كلية الترجمة والتفسير. تتركز أبحاثها على النثر العربي في العصور الوسطى، وهي تعمل حاليًا على ترجمة "المقامات" للحمذاني.
+    </p>
+  </section>
 
-    <!-- About Section -->
-    <section data-lang="en" class="content">
-        <h2>Bio</h2>
-        <p>
-            Since 2020, as a full-time researcher at the <a href="https://builder.hufs.ac.kr/user/indexSub.action?codyMenuSeq=42286281&siteId=hufsenglish3&menuType=T&uId=3&sortChar=A&linkUrl=3_5.html&mainFrame=right">Institute of Middle East Studies</a> at Hankuk University of Foreign Studies, Dr. Kim has been conducting the Humanities and Social Research project funded by the National Research Foundation of Korea titled "The Arab Spring and Diaspora: Conflict, Harmony, and Coexistence". Dr. Kim is currently also working as a guest professor in the Arabic Language Department and in the <a href="https://builder.hufs.ac.kr/user/indexSub.action?codyMenuSeq=42185649&siteId=hufsenglish3&menuType=T&uId=2&sortChar=AB&linkUrl=02_03.html&mainFrame=right">Graduate School of Interpretation and Translation</a> (Korean-Arabic division) at Hankuk University of Foreign Studies.
-            <br><br>
-            Dr. Kim obtained her doctorate in literature from Hankuk University of Foreign Studies with a study on the "Book of Misers" by the 9th-century Arabic writer, al-Jahiz. She received her master's degree from the Graduate School of Interpretation and Translation at Hankuk University of Foreign Studies and graduated from the Arabic Language Department of the same university.
-            <br><br>
-            Dr. Kim's primary research area is medieval Arabic prose, and she is currently translating "al-Maqamaat" by al-Hamadhani.
-        </p>
-    </section>
-    <section data-lang="ko" class="content" style="display: none;">
-        <h2>약력</h2>
-        <p>한국외국어대학교 중동연구소 전임연구원으로 2020년부터 한국연구재단 인문사회연구사업 <아랍의 봄과 이산(離散): 갈등·화합·공존>을 수행 중이다. 한국외국어대학교 아랍어과, 동 대학 통번역대학원 한-아과 객원교수로 재직 중이다.
-        한국외국어대학교에서 9세기 아랍 문학가 ‘자히즈의 『수전노』 연구’로 문학박사학위를 취득했다. 한국외국어대학교 통번역 대학원에서 석사 학위를 받았고, 동 대학 아랍어과를 졸업했다. 
-        주요 연구 분야는 중세 아랍 산문이며, 현재 하마다니(al-Hamadhani)의 『마까마(al-Maqamaat)』를 번역 중이다. 
-        </p>
-    </section>
-    <section data-lang="ar" class="content" style="display: none;">
-        <h2>عني</h2>
-        <p>
-        منذ العام 2020، وكباحثة رئيسية في معهد الشرق الأوسط بجامعة هانكوك للدراسات الأجنبية، قامت الدكتورة كيم بإجراء مشروع البحث في العلوم الإنسانية والاجتماعية بتمويل من المؤسسة الوطنية للبحوث الكورية بعنوان "الربيع العربي والشتات: الصراع، الوئام، والتعايش". تعمل الدكتورة كيم حاليًا كأستاذة زائرة في قسم اللغة العربية وفي كلية الترجمة والتفسير (القسم الكوري-العربي) بجامعة هانكوك للدراسات الأجنبية.
-        <br><br>
-        حصلت الدكتورة كيم على درجة الدكتوراه في الأدب من جامعة هانكوك للدراسات الأجنبية بدراسة عن "كتاب البخلاء" للكاتب العربي من القرن التاسع، الجاحظ. حصلت على درجة الماجستير من كلية الترجمة والتفسير في جامعة هانكوك للدراسات الأجنبية وتخرجت من قسم اللغة العربية في نفس الجامعة.
-        <br><br>
-        تركز أبحاث الدكتورة كيم أساسًا على النثر العربي في العصور الوسطى، وهي تقوم حاليًا بترجمة "المقامات" للحمذاني.
+  <!-- Research and Publications Section -->
+  <section id="research" class="content" data-lang="en">
+    <h2>Key Research & Publications</h2>
+    <ul>
+      <li>Muqaddimah of Ibn Khaldun (2020)</li>
+      <li>A Midnight Map of Ali al-Bader (2012)</li>
+      <li>Kitab al-Bukhala of al-Jahiz (2007)</li>
+    </ul>
+  </section>
+  <section id="research" class="content" data-lang="ko" style="display: none;">
+    <h2>대표 논문 / 번역서</h2>
+    <ul>
+      <li>이븐 칼둔의 『무깟디마』 (2020)</li>
+      <li>알리 바드르의 『한 밤의 지도』 (2012)</li>
+      <li>자히즈의 『수전노』 (2007)</li>
+    </ul>
+  </section>
+  <section id="research" class="content" data-lang="ar" style="display: none;">
+    <h2>الأبحاث والمنشورات</h2>
+    <ul>
+      <li>مقدمة ابن خلدون (2020)</li>
+      <li>خريطة منتصف الليل لعلي بدر (2012)</li>
+      <li>كتاب البخلاء للجاحظ (2007)</li>
+    </ul>
+  </section>
 
-        </p>
-    </section>
-    <!-- Education Section -->
-<!--     <section data-lang="en" class="content">
-        <h2>Education</h2>
-        <ul>
-            <li>PhD in Arabic Literature, [University], [Year]</li>
-            <li>Masters in ..., [University], [Year]</li>
-        </ul>
-    </section>
-    <section data-lang="ko" class="content" style="display: none;">
-        <h2>Education</h2>
-        <ul>
-            <li>한국외국어대학교 아랍어 박사</li>
-            <li>한국외국어대학교 아랍어 석사</li>
-            <li>한국외국어대학교 아랍어 학사, 1986</li>
-        </ul>
-    </section>
-    <section data-lang="ar" class="content" style="display: none;">
-        <h2>Education</h2>
-        <ul>
-            <li>PhD in Arabic Literature, [University], [Year]</li>
-            <li>Masters in ..., [University], [Year]</li>
-        </ul>
-    </section> -->
-    <!-- Research and Publications Section -->
-    <section data-lang="en" class="content" id="research">
-        <h2>Key Research & Publications</h2>
-        <ul>
-            <li>Muqaddimah of Ibn Khaldun (2020)</li>
-            <li>Kitab al-Bukhala of al-Jahiz (2007)</li>
-            <li>A Midnight Map of Ali al-Bader(2012)</li>
-        </ul>
-    </section>
-    <section data-lang="ko" class="content" id="research" style="display: none;">
-        <h2>대표 논문 / 번역서</h2>
-        <ul>
-            <li>이븐 칼둔의 『무깟디마』 (2020)</li>
-            <li>자히즈의 『수전노』 (2007)</li>
-            <li>알리 바드르의 『한 밤의 지도』 (2012)</li>
-        </ul>
-    </section>
+  <!-- Awards Section -->
+  <section id="awards" class="content" data-lang="en">
+    <h2>Awards & Recognitions</h2>
+    <ul>
+      <li>2020 Achievement Award in Arabic to Korean, Sheikh Hamad Award for Translation and International Understanding</li>
+      <li>Judge for the 2022 Korea Translation Award for Aspiring Translators (Korean to Arabic)</li>
+    </ul>
+  </section>
+  <section id="awards" class="content" data-lang="ko" style="display: none;">
+    <h2>수상</h2>
+    <ul>
+      <li>2020 셰이크 하마드 번역상(아랍어-한국어) 수상</li>
+      <li>2022 한국문학번역원 주최 한국문학 번역신인상 심사위원</li>
+    </ul>
+  </section>
+  <section id="awards" class="content" data-lang="ar" style="display: none;">
+    <h2>الجوائز والتكريمات</h2>
+    <ul>
+      <li>جائزة الإنجاز لعام 2020 في الترجمة من العربية إلى الكورية، جائزة الشيخ حمد للترجمة والتفاهم الدولي</li>
+      <li>عضو لجنة التحكيم لجائزة الترجمة الكورية لعام 2022 للمترجمين الجدد (الكورية إلى العربية)</li>
+    </ul>
+  </section>
 
-    <!-- Conferences and Talks Section -->
-<!--     <section id="conferences">
-        <h2>Conferences & Talks</h2>
-        <ul>
-            <li>"Title of the Talk", [Conference Name], [Year].</li>
-        </ul>
-    </section> -->
+  <!-- Contact Section -->
+  <section id="contact" class="content" data-lang="en" style="border-bottom: None">
+    <h2>Contact</h2>
+    <p>Please feel free to reach me at <span class="email-placeholder">[loading...]</span>.</p>
+  </section>
+  <section id="contact" class="content" data-lang="ko" style="display: none; border-bottom: None">
+    <h2>연락처</h2>
+    <p>이메일: <span class="email-placeholder">[loading...]</span></p>
+  </section>
+  <section id="contact" class="content" data-lang="ar" style="display: none; border-bottom: None">
+    <h2>معلومات التواصل</h2>
+    <p>لا تتردد في التواصل معي عبر <span class="email-placeholder">[جاري التحميل...]</span>.</p>
+  </section>
 
-    <!-- Awards and Recognitions Section -->
-    <section data-lang="en" class="content" id="awards">
-        <h2>Awards & Recognitions</h2>
-        <ul>
-            <li>2020 Achievement Award in Arabic to Korean, 
-Sheikh Hamad Award for Translation and International Understanding</li>
-            <li>Judge for the 2022 Korea Translation Award for Aspiring Translators hosted by Literature Translation Institute of Korea, (Korean to Arabic)</li>
-        </ul>
-    </section>
-    <section data-lang="ko" class="content" id="awards" style="display: none;">
-        <h2>수상</h2>
-        <ul>
-            <li>2020 셰이크 하마드 번역상(아랍어-한국어) 수상</li>
-            <li>2022 한국문학번역원 주최 한국문학 번역신인상 심사위원</li>
-        </ul>
-    </section>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Jeong A Kim. All rights reserved.</p>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2023 Jeong A Kim. All rights reserved.</p>
-    </footer>
-    <script src="./localization.js" defer></script>
+  <!-- Scripts -->
+  <script src="./localization.js" defer></script>
+  <script>
+    // Bot detection and email injection
+    (function(){
+      function isLikelyBot() {
+        if (navigator.webdriver) return true;
+        var ua = navigator.userAgent;
+        if (/HeadlessChrome/.test(ua)) return true;
+        return false;
+      }
+  
+      var placeholders = document.querySelectorAll('.email-placeholder');
+      if (!isLikelyBot()) {
+        setTimeout(function(){
+          var email = "rhaon0819@gmail.com";
+          placeholders.forEach(function(el) {
+            var link = document.createElement("a");
+            link.href = "mailto:" + email;
+            link.textContent = email;
+            el.innerHTML = "";
+            el.appendChild(link);
+          });
+        }, 1000);
+      } else {
+        placeholders.forEach(function(el) {
+          el.textContent = "[contact unavailable]";
+        });
+      }
+    })();
+  
+    // Language selection function
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function(el) {
+        el.style.display = (el.getAttribute('data-lang') === lang) ? "block" : "none";
+      });
+    }
+  </script>
 </body>
-
 </html>
