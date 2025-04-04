@@ -8,17 +8,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Language Selector -->
-  <nav id="language-selector">
-    <button onclick="changeLanguage('en')">English</button>
-    <button onclick="changeLanguage('ko')">한국어</button>
-    <button onclick="changeLanguage('ar')">عربي</button>
-  </nav>
+  <header>
+    <!-- Language Selector -->
+    <nav id="language-selector">
+        <button class="active" onclick="changeLanguage('en', this)">English</button>
+        <button onclick="changeLanguage('ko', this)">한국어</button>
+        <button onclick="changeLanguage('ar', this)">عربي</button>
+      </nav>
+  </header>
   
   <!-- Profile Area -->
   <section id="profile-area">
     <div id="profile-picture">
-      <img src="./assets/jakim.png" alt="Jeong A Kim's Profile Picture">
+      <img src="./assets/profile.jpg" alt="Jeong A Kim's Profile Picture">
     </div>
     <div id="profile-info">
       <div class="profile-info content" data-lang="en">
@@ -28,11 +30,11 @@
            Translator of The Muqaddimah and other medieval Arabic prose</p>
       </div>
       <div class="profile-info content" data-lang="ko" style="display: none;">
-        <h1>김정아</h1>
+        <h1>김정아 문학박사</h1>
         <p>한국외국어대학교 중동연구소 전임연구원, 한국외국어대학교 객원교수, 번역가.</p>
       </div>
       <div class="profile-info content" data-lang="ar" style="display: none;">
-        <h1>جيونغ آه كيم</h1>
+        <h1>كيم جيونغ آه، دكتوراة في الأدب العربي</h1>
         <p>باحثة، معهد الدراسات الشرق أوسطية<br>
            أستاذة، جامعة هانكوك للدراسات الأجنبية<br>
            مترجمة “المقدمة” ونصوص أخرى من النثر العربي في العصور الوسطى</p>
@@ -141,7 +143,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="./localization.js" defer></script>
+  <!-- <script src="./localization.js" defer></script> -->
   <script>
     // Bot detection and email injection
     (function(){
@@ -171,12 +173,31 @@
       }
     })();
   
-    // Language selection function
-    function changeLanguage(lang) {
-      document.querySelectorAll('[data-lang]').forEach(function(el) {
-        el.style.display = (el.getAttribute('data-lang') === lang) ? "block" : "none";
-      });
+// Language selection function with two parameters
+function changeLanguage(lang, btn) {
+    // Hide all content elements with a data-lang attribute
+    const allContent = document.querySelectorAll('[data-lang]');
+    allContent.forEach(el => el.style.display = 'none');
+    
+    // Show content for the selected language
+    const selected = document.querySelectorAll(`[data-lang="${lang}"]`);
+    selected.forEach(el => el.style.display = 'block');
+    
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('#language-selector button');
+    buttons.forEach(button => button.classList.remove('active'));
+    
+    // Add active class to the clicked button
+    btn.classList.add('active');
+  }
+  
+  // On DOM load, set the default language (English) by triggering changeLanguage.
+  document.addEventListener("DOMContentLoaded", function(){
+    const defaultBtn = document.querySelector('#language-selector button.active');
+    if (defaultBtn) {
+      changeLanguage('en', defaultBtn);
     }
+  });
   </script>
 </body>
 </html>

@@ -6,25 +6,36 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
-  }
+}
   
-  /* Language Selector */
-
-  /* Language Toggle */
-  #language-selector {
+/* Language Header Wrapper */
+header {
     text-align: center;
-    margin: 1.5em 0;
-  }
+    padding: 5em 0 3em;
+    border-bottom: 1px solid #ddd;
+}
+  
+/* Language Selector */
+#language-selector {
+    display: inline-block;
+}
   
   #language-selector button {
+    display: inline-block;
     background: none;
     border: none;
     color: #333;
     font-size: 1em;
     padding: 0.5em 1em;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: border-bottom 0.3s, color 0.3s;
     margin: 0 10px;
+  }
+  
+  #language-selector button.active {
+    border-bottom: 2px solid #2c3e50 !important;
+    position: relative;
+    z-index: 2;
   }
   
   #language-selector button:hover,
@@ -32,7 +43,6 @@ body {
     color: #2c3e50;
     outline: none;
   }
-  
 
 
 
